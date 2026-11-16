@@ -1,0 +1,16 @@
+{
+  "name": "NES · Sistema de Certificados",
+  "short_name": "NES",
+  "description": "Sistema de Certificados do Núcleo de Estudos em Suinocultura",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf6f8",
+  "theme_color": "#a8325a",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icones/nes-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icones/nes-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icones/nes-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

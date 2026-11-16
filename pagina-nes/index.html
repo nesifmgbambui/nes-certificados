@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NES · Sistema de Certificados</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Acesso ao Sistema de Certificados do NES.">
+<meta name="theme-color" content="#a8325a">
+<link rel="icon" type="image/png" sizes="64x64" href="icones/nes-favicon-64.png">
+<link rel="apple-touch-icon" href="icones/nes-apple-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NES">
+<style>
+:root{--fundo:#fbf6f8;--texto:#2a1620;--suave:#6b5560;--marca:#a8325a;--marca-tx:#fff;--cartao:#fff;--borda:#ecd9e1}
+@media (prefers-color-scheme:dark){:root{--fundo:#16131a;--texto:#f3e9ee;--suave:#b9a8b1;--marca:#e07a9d;--marca-tx:#2a0f1a;--cartao:#211c26;--borda:#3a303f}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:16px;background:var(--fundo);color:var(--texto);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{width:100%;max-width:420px;background:var(--cartao);border:1px solid var(--borda);border-radius:18px;padding:28px 22px;text-align:center}
+img{width:96px;height:96px;border-radius:22px}
+h1{font-size:1.35rem;margin:14px 0 4px}
+p{margin:6px 0;color:var(--suave)}
+a.btn{display:block;margin:20px 0 6px;padding:14px 16px;border-radius:12px;background:var(--marca);color:var(--marca-tx);font-weight:700;text-decoration:none;font-size:1.05rem}
+a.btn:focus-visible{outline:3px solid var(--texto);outline-offset:3px}
+details{text-align:left;margin-top:18px;border-top:1px solid var(--borda);padding-top:12px}
+summary{cursor:pointer;font-weight:600;color:var(--texto)}
+ol{padding-left:20px;margin:8px 0;color:var(--suave)}
+small{display:block;margin-top:16px;color:var(--suave)}
+</style>
+</head>
+<body>
+<main>
+  <img src="icones/nes-192.png" alt="Símbolo do NES">
+  <h1>Sistema de Certificados</h1>
+  <p>Núcleo de Estudos em Suinocultura</p>
+  <a class="btn" id="abrir" href="https://script.google.com/macros/s/AKfycbye3QuwAHcznNGsUDVo0FFvVZDLOUmWv6yOtFK-TDbAfd4GxwgFEMunUui2gKRNHvq0/exec">Abrir o sistema</a>
+  <details open>
+    <summary>Como deixar um atalho com a logo do NES</summary>
+    <ol>
+      <li><b>iPhone (Safari):</b> toque em Compartilhar e depois em <b>Adicionar à Tela de Início</b>.</li>
+      <li><b>Android (Chrome):</b> toque nos três pontinhos e depois em <b>Instalar aplicativo</b> ou <b>Adicionar à tela inicial</b>.</li>
+      <li><b>Computador (Chrome ou Edge):</b> clique no ícone de instalar na barra de endereço, ou no menu e depois em <b>Salvar e compartilhar &gt; Criar atalho</b>.</li>
+    </ol>
+    <p>Depois é só tocar no ícone do NES: ele abre direto o sistema.</p>
+  </details>
+  <small>Esta página só abre o sistema. Não guarda dados de ninguém.</small>
+</main>
+<script>
+(function(){
+  var url = document.getElementById('abrir').href;
+  var instalado = false;
+  try { instalado = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone === true; } catch (e) {}
+  if (instalado) { location.replace(url); }
+})();
+</script>
+</body>
+</html>
